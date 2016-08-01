@@ -1,0 +1,640 @@
+<!DOCTYPE HTML>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@turnitin"/>
+    <meta name="twitter:creator" content="@turnitin"/>
+    <meta name="twitter:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:title" content="Turnitin Plagiarism Quiz"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <title></title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/min/jquery.fullPage-min.js"></script>
+    <script type="text/javascript" src="js/min/quiz-main-min.js"></script>
+  </head>
+  <body>
+
+  <!-- Turnitin logo SVG -->
+
+  <div class="logo">
+    <svg width="220" height="70" viewBox="0 0 220 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title>Turnitin Logo (Text and Icon)</title>
+      <path fill="#FFFFFF" d="M161.209,32.32c3.504-8.264,5.432-17.369,5.432-26.911h32.818c0,15.398-3.419,29.998-9.54,43.082H177.4
+        L161.209,32.32z M177.4,44.916h10.529c4.854-11.077,7.728-23.135,8.178-35.892L170.15,9.026c-0.396,8.232-2.16,16.005-5.074,23.294
+        L177.4,44.916z"/>
+      <path fill="#FFFFFF" d="M199.164,13.252c5.904-1.187,12.288,0.569,14.682,3.535c5.246,6.498,0.062,22.07-13.787,33.257
+        c-12.771,10.31-28.057,14.281-32.889,8.286c-3.335-4.137-0.884-12.333,3.405-16.65l6.825,6.812v-16.17h-16.189l6.792,6.797
+        c-5.733,5.751-8.364,15.27-3.757,21.477c1.413,1.904,3.583,3.039,6.104,3.615c7.584,1.734,19.519-2.541,30.051-11.043
+        c15.078-12.179,21.502-28.388,15.08-36.344C212.25,12.823,206.268,11.78,199.164,13.252"/>
+      <path fill="#FFFFFF" d="M2,28.41l8.875-8.719v4.93h7.553v4.253h-7.553v11.688c0,2.73,1.134,4.096,3.401,4.096
+        c1.696,0,3.485-0.561,5.371-1.689v4.416c-1.815,1.018-3.797,1.529-5.941,1.529c-2.164,0-3.963-0.632-5.399-1.896
+        c-0.451-0.377-0.821-0.809-1.118-1.285c-0.293-0.475-0.541-1.097-0.737-1.867c-0.2-0.771-0.3-2.233-0.3-4.398V28.874H2V28.41z"/>
+      <path fill="#FFFFFF" d="M37.555,48.499v-3.062c-1.004,1.097-2.15,1.953-3.438,2.562c-1.289,0.609-2.574,0.912-3.854,0.912
+        c-1.507,0-2.896-0.374-4.167-1.127s-2.231-1.771-2.881-3.062c-0.648-1.289-0.973-3.432-0.973-6.423V24.619h4.725v13.609
+        c0,2.504,0.358,4.254,1.075,5.25c0.72,0.992,1.978,1.487,3.778,1.487c2.248,0,4.159-1.098,5.735-3.295V24.619h4.723v23.88H37.555z"
+        />
+      <path fill="#FFFFFF" d="M60.044,24.154c-2.284,0-4.568,1.188-6.851,4.872l-0.261,0.417v-4.821h-4.75V48.5h4.75V36.014
+        c0-1.992,0.56-3.712,1.675-5.167c1.117-1.452,2.436-2.176,3.959-2.176c1.395,0,2.914,0.023,4.549,1.571v-5.23
+        C62.068,24.446,61.043,24.154,60.044,24.154"/>
+      <path fill="#FFFFFF" d="M71.243,24.621v3.036c2.111-2.334,4.506-3.502,7.189-3.502c1.487,0,2.872,0.383,4.152,1.154
+        s2.254,1.826,2.92,3.167c0.665,1.34,0.999,3.465,0.999,6.371V48.5H81.78V34.898c0-2.44-0.373-4.183-1.117-5.232
+        c-0.744-1.043-1.989-1.567-3.737-1.567c-2.232,0-4.126,1.116-5.684,3.344v17.056h-4.828V24.621H71.243z"/>
+      <path fill="#FFFFFF" d="M94.541,16.614c0.78,0,1.445,0.268,2,0.803c0.553,0.538,0.832,1.194,0.832,1.973
+        c0,0.763-0.278,1.42-0.832,1.974c-0.555,0.552-1.22,0.831-2,0.831c-0.726,0-1.366-0.283-1.919-0.845
+        c-0.554-0.56-0.83-1.214-0.83-1.96c0-0.727,0.275-1.372,0.83-1.933C93.175,16.895,93.815,16.614,94.541,16.614 M92.208,24.621
+        h4.723v23.878h-4.723V24.621z"/>
+      <path fill="#FFFFFF" d="M99.701,28.41l8.877-8.719v4.93h7.553v4.253h-7.553v11.688c0,2.73,1.134,4.096,3.398,4.096
+        c1.694,0,3.488-0.561,5.375-1.689v4.416c-1.817,1.018-3.799,1.529-5.945,1.529c-2.164,0-3.963-0.632-5.399-1.896
+        c-0.451-0.377-0.821-0.809-1.117-1.285c-0.292-0.475-0.539-1.097-0.738-1.867c-0.198-0.771-0.296-2.233-0.296-4.398V28.874h-4.155
+        V28.41z"/>
+      <path fill="#FFFFFF" d="M122.723,16.614c0.776,0,1.441,0.268,1.996,0.803c0.559,0.538,0.832,1.194,0.832,1.973
+        c0,0.763-0.273,1.42-0.832,1.974c-0.555,0.552-1.22,0.831-1.996,0.831c-0.727,0-1.367-0.283-1.922-0.845
+        c-0.555-0.56-0.83-1.214-0.83-1.96c0-0.727,0.275-1.372,0.83-1.933S121.996,16.614,122.723,16.614 M120.384,24.621h4.726v23.878
+        h-4.726V24.621z"/>
+      <path fill="#FFFFFF" d="M135.736,24.621v3.036c2.113-2.334,4.51-3.502,7.189-3.502c1.487,0,2.874,0.383,4.155,1.154
+        c1.278,0.771,2.253,1.826,2.918,3.167c0.665,1.34,1.004,3.465,1.004,6.371V48.5h-4.728V34.898c0-2.44-0.371-4.183-1.114-5.232
+        c-0.748-1.043-1.99-1.567-3.738-1.567c-2.233,0-4.127,1.116-5.687,3.344v17.056h-4.825V24.621H135.736z"/>
+      <path fill="#FFFFFF" d="M151.025,20.943h0.482V19.67h0.289c0.37,0,0.512,0.13,0.893,0.805l0.265,0.468h0.591l-0.363-0.583
+        c-0.25-0.402-0.438-0.659-0.697-0.75v-0.016c0.509-0.028,0.856-0.377,0.856-0.862c0-0.326-0.251-0.786-0.991-0.786h-1.324V20.943
+        L151.025,20.943z M151.509,19.256v-0.902h0.778c0.318,0,0.537,0.174,0.537,0.447c0,0.311-0.25,0.455-0.619,0.455H151.509z
+         M154.576,19.398c0,1.288-1.047,2.332-2.335,2.332c-1.285,0-2.323-1.044-2.323-2.332c0-1.287,1.038-2.323,2.323-2.323
+        C153.529,17.075,154.576,18.112,154.576,19.398 M155.035,19.398c0-1.542-1.249-2.785-2.794-2.785c-1.543,0-2.784,1.242-2.784,2.785
+        c0,1.544,1.241,2.794,2.784,2.794C153.786,22.193,155.035,20.943,155.035,19.398"/>
+      </svg>
+  </div>
+
+  <div id="quiz">
+
+    <!-- Begin Jotform Form (entire structure is wrapped in the form) -->
+
+    <form class="jotform-form" action="//submit.jotformpro.com/submit.php" method="post" name="form_52386984506972" id="52386984506972" accept-charset="utf-8" target="loadself">
+
+      <input type="hidden" name="formID" value="52386984506972" />
+
+      <!-- begin intro section -->
+
+      <div class="section" id="intro">
+        <h1>Title</h1>
+        <a class="cta start">Take the Quiz</a>
+      </div>
+
+      <!-- end intro section -->
+
+
+      <!-- begin data collection reminder slide -->
+
+      <div class="section" id="section_1">
+        <li class="container form-line" data-type="control_checkbox" id="id_1">
+            <h1>First Things First</h1>
+            <fieldset>
+              <legend align="center">We're collecting quiz responses for a future study. No personal info is included.</legend>
+              <div id="cid_1" class="form-input">
+                <ul class="inputs">
+                  <li><input type="checkbox" class="form-checkbox" id="input_1_0" name="q1_optIn[]" value="You may use my results" checked="checked"/>
+                <label id="label_input_1_0" for="input_1_0"> You may use my results </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <a class="cta start-quiz">Let's Get Started!</a>
+          </li>
+      </div>
+
+      <!-- end data collection reminder section -->
+
+
+
+      <!-- begin main quiz section -->
+
+      <div class="section" id="section_2">
+
+        <!-- begin slide 1 -->
+
+        <div class="slide" id="slide_1" >
+          <li class="container form-line" data-type="control-radio" id="id_3">
+            <h2>A few background questions:</h2>
+            <fieldset >
+              <legend align="center" id="label_3" for="input_3"><h3>What is your current level of education?</h3></legend>
+              <div id="cid_3" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_3_0" name="q3_whatIs" value="Middle School" />
+                <label id="label_input_3_0" for="input_3_0"> Middle School </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_3_1" name="q3_whatIs" value="High School" />
+                <label id="label_input_3_1" for="input_3_1"> High School </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_3_2" name="q3_whatIs" value="College / University" />
+                <label id="label_input_3_2" for="input_3_2"> College / University </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_3_3" name="q3_whatIs" value="Graduate Student" />
+                <label id="label_input_3_3" for="input_3_3"> Graduate Student </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_3_4" name="q3_whatIs" value="I'm an Educator" />
+                <label id="label_input_3_4" for="input_3_4"> I'm an Educator </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_3_5" name="q3_whatIs" value="Other" />
+                <label id="label_input_3_5" for="input_3_5"> Other </label></li>
+                </ul>
+              </div>
+            </fieldset>
+          </li>
+        </div>
+
+        <!-- end slide 1 -->
+
+
+        <!-- begin slide 2-->
+
+        <div class="slide" id="slide_2">
+          <li class="container form-line" data-type="control_radio" id="id_4">
+            <fieldset >
+              <legend align="center" id="label_4" for="input_4"><h3>How would you rate your current level of understanding of plagiarism ?</h3></legend>
+              <div id="cid_4" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_4_0" name="q4_howWould" value="Very Strong" />
+                <label id="label_input_4_0" for="input_4_0"> Very Strong </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_4_1" name="q4_howWould" value="Strong" />
+                <label id="label_input_4_1" for="input_4_1"> Strong </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_4_2" name="q4_howWould" value="Fair" />
+                <label id="label_input_4_2" for="input_4_2"> Fair </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_4_3" name="q4_howWould" value="Weak" />
+                <label id="label_input_4_3" for="input_4_3"> Weak </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_4_4" name="q4_howWould" value="Very Weak" />
+                <label id="label_input_4_4" for="input_4_4"> Very Weak </label></li>
+                </ul>
+              </div>
+            </fieldset>
+          </li>
+        </div>
+
+        <!-- end slide 2 -->
+
+
+        <!-- begin slide 3-->
+
+        <div class="slide" id="slide_3">
+          <li class="container form-line" data-type="control_radio" id="id_5">
+            <fieldset >
+              <legend align="center" id="label_5" for="input_5"><h3>Have you ever received a Turnitin Originality Report?</h3></legend>
+              <div id="cid_5" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_5_0" name="q5_haveYou" value="Yes" />
+                <label id="label_input_5_0" for="input_5_0"> Yes </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_5_1" name="q5_haveYou" value="No" />
+                <label id="label_input_5_1" for="input_5_1"> No </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_5_2" name="q5_haveYou" value="Not Applicable" />
+                <label id="label_input_5_2" for="input_5_2"> Not Applicable </label></li>
+                </ul>
+              </div>
+            </fieldset>
+          </li>
+        </div>
+
+        <!-- end slide 3 -->
+
+
+        <!-- begin slide 4-->
+
+        <div class="slide" id="slide_4">
+          <li class="container form-line" data-type="control_radio" id="id_6">
+            <fieldset >
+                <legend align="center" id="label_6" for="input_6"> <h3>Have you ever had an instructor discuss plagiarism and proper citation in class? </h3></legend>
+                <div id="cid_6" class="form-input">
+                  <ul class="inputs">
+                    <li><input type="radio" class="form-radio" id="input_6_0" name="q6_haveYou6" value="Yes" />
+                <label id="label_input_6_0" for="input_6_0"> Yes </label></li>
+
+                    <li><input type="radio" class="form-radio" id="input_6_1" name="q6_haveYou6" value="No" />
+                <label id="label_input_6_1" for="input_6_1"> No </label></li>
+                  </ul>
+                </div>
+            </fieldset>
+          </li>
+        </div>
+
+        <!-- end slide 4 -->
+
+
+        <!-- begin slide 5 -->
+
+        <div class="slide" id="slide_5" data-question="1">
+          <li class="container form-line" data-type="control_radio" id="id_7">
+            <h2>OK, let's get to it!</h2>
+            <fieldset >
+              <legend align="center" id="label_7" for="input_7"><h3>What best describes the rightness or wrongness of plagiarism?</h3></legend>
+              <div id="cid_7" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_7_0" name="q7_whatBest" value="A" />
+                <label id="label_input_7_0" for="input_7_0">  Always wrong because it is theft and fraud </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_7_1" name="q7_whatBest" value="B" />
+                <label id="label_input_7_1" for="input_7_1">  Plagiarism is not a right or wrong kind of thing </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_7_2" name="q7_whatBest" value="C" />
+                <label id="label_input_7_2" for="input_7_2"> In some situations, it is OK </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_7_3" name="q7_whatBest" value="D" />
+                <label id="label_input_7_3" for="input_7_3">There is nothing wrong with it </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 5 -->
+
+
+        <!-- begin slide 6 -->
+
+        <div class="slide" id="slide_6" data-question="2">
+          <li class="container form-line" data-type="control_radio" id="id_8">
+            <fieldset >
+              <legend align="center" id="label_8" for="input_8"><h3>Which of the following is not an example of plagiarism? </h3></legend>
+              <div id="cid_8" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_8_0" name="q8_whichOf" value="A" />
+                <label id="label_input_8_0" for="input_8_0">Changing a few words of a paragraph someone else wrote </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_8_1" name="q8_whichOf" value="B" />
+                <label id="label_input_8_1" for="input_8_1">Borrowing an existing idea and presenting it as a new idea </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_8_2" name="q8_whichOf" value="C" />
+                <label id="label_input_8_2" for="input_8_2"> Providing the full source for a quotation </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_8_3" name="q8_whichOf" value="D" />
+                <label id="label_input_8_3" for="input_8_3"> Translating others' written work into another language without citation </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_8_4" name="q8_whichOf" value="E" />
+                <label id="label_input_8_4" for="input_8_4"> None of the above </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 6 -->
+
+
+        <!-- begin slide 7 -->
+
+        <div class="slide" id="slide_7" data-question="3">
+          <li class="container form-line" data-type="control_radio" id="id_9">
+            <fieldset >
+              <legend align="center" id="label_9" for="input_9"><h3>It is acceptable to copy-and-paste a sentence written by someone else into your paper and simply add quotation marks around it.</h3></legend>
+              <div id="cid_9" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_9_0" name="q9_itIs" value="True" />
+                <label id="label_input_9_0" for="input_9_0"> True </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_9_1" name="q9_itIs" value="False" />
+                <label id="label_input_9_1" for="input_9_1"> False </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 7 -->
+
+
+        <!-- begin slide 8-->
+
+        <div class="slide" id="slide_8" data-question="4">
+          <li class="container form-line" data-type="control_radio" id="id_10">
+            <fieldset >
+              <legend align="center" id="label_10" for="input_10"><h3>If you forget to cite a source in your paper, that is still plagiarism.</h3></legend>
+              <div id="cid_10" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_10_0" name="q10_ifYou" value="True" />
+                <label id="label_input_10_0" for="input_10_0"> True </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_10_1" name="q10_ifYou" value="False" />
+                <label id="label_input_10_1" for="input_10_1"> False </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 8 -->
+
+
+        <!-- begin slide 9-->
+
+        <div class="slide" id="slide_9" data-question="5">
+          <li class="container form-line" data-type="control_radio" id="id_11">
+            <fieldset >
+              <legend align="center" id="label_11" for="input_11"><h3>Plagiarism is a major concern only in education.</h3></legend>
+              <div id="cid_11" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_11_0" name="q11_plagiarismIs" value="True" />
+                <label id="label_input_11_0" for="input_11_0"> True </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_11_1" name="q11_plagiarismIs" value="False" />
+                <label id="label_input_11_1" for="input_11_1"> False </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 9 -->
+
+
+        <!-- begin slide 10 -->
+
+        <div class="slide" id="slide_10" data-question="6">
+          <li class="container form-line" data-type="control_radio" id="id_12">
+            <fieldset >
+              <legend align="center" id="label_12" for="input_12"><h3>Even though no one may be harmed by it, plagiarism is still unethical.</h3></legend>
+              <div id="cid_12" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_12_0" name="q12_evenThough" value="True" />
+                <label id="label_input_12_0" for="input_12_0"> True </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_12_1" name="q12_evenThough" value="False" />
+                <label id="label_input_12_1" for="input_12_1"> False </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 10 -->
+
+
+        <!-- begin slide 11 -->
+
+        <div class="slide" id="slide_11" data-question="7">
+          <li class="container form-line" data-type="control_radio" id="id_13">
+            <fieldset >
+              <legend align="center" id="label_13" for="input_13"><h3>Which of the following requires proper citation?</h3></legend>
+              <div id="cid_13" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_13_0" name="q13_whichOf13" value="A" />
+                <label id="label_input_13_0" for="input_13_0"> When I include my own ideas that are unique to the paper I am writing.</label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_13_1" name="q13_whichOf13" value="B" />
+                <label id="label_input_13_1" for="input_13_1"> When I refer to my own papers that I have previously written. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_13_2" name="q13_whichOf13" value="C" />
+                <label id="label_input_13_2" for="input_13_2"> None of the Above </label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 11 -->
+
+
+        <!-- begin slide 12 -->
+
+        <div class="slide" id="slide_12" data-question="8">
+          <li class="container form-line" data-type="control_radio" id="id_14">
+            <fieldset >
+              <legend align="center" id="label_14" for="input_14"><h3>Which of the following requires proper citation?</h3></legend>
+              <div id="cid_14" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_14_0" name="q14_whichOf14" value="A" />
+                <label id="label_input_14_0" for="input_14_0"> When using information from crowd-sourced sources, like Wikipedia, because they are in the public domain. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_14_1" name="q14_whichOf14" value="B" />
+                <label id="label_input_14_1" for="input_14_1"> When using information that is considered common knowledge or widely accessible (for example: most of the Earth's surface is water) </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_14_2" name="q14_whichOf14" value="C" />
+                <label id="label_input_14_2" for="input_14_2"> None of the Above </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 12 -->
+
+
+        <!-- begin slide 13 -->
+
+        <div class="slide" id="slide_13" data-question="9">
+          <li class="container form-line" data-type="control_radio" id="id_15">
+            <fieldset >
+              <legend align="center" id="label_15" for="input_15"><h3>To paraphrase properly, you need to:</h3></legend>
+              <div id="cid_15" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_15_0" name="q15_toParaphrase" value="A" />
+                <label id="label_input_15_0" for="input_15_0"> Change a few words and cite it to make it your own. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_15_1" name="q15_toParaphrase" value="B" />
+                <label id="label_input_15_1" for="input_15_1"> Put quotation marks around the text and cite it. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_15_2" name="q15_toParaphrase" value="C" />
+                <label id="label_input_15_2" for="input_15_2"> Use only the idea from the text without citing it. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_15_3" name="q15_toParaphrase" value="D" />
+                <label id="label_input_15_3" for="input_15_3"> Summarize the text in your own words and cite it. </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 13 -->
+
+
+        <!-- begin slide 14 -->
+
+        <div class="slide" id="slide_14" data-question="10">
+          <li class="container form-line" data-type="control_radio" id="id_16">
+            <fieldset >
+              <legend align="center" id="label_16" for="input_16"><h3>Say you found two papers about the same research: Paper A is the original finding; Paper B is an analysis that references Paper A. You use a section of the analysis from Paper B. Which paper do you cite?</h3></legend>
+              <div id="cid_16" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_16_0" name="q16_sayYou" value="A" />
+                <label id="label_input_16_0" for="input_16_0"> Paper A </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_16_1" name="q16_sayYou" value="B" />
+                <label id="label_input_16_1" for="input_16_1"> Paper B </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_16_2" name="q16_sayYou" value="C" />
+                <label id="label_input_16_2" for="input_16_2"> Both </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 14 -->
+
+
+        <!-- begin slide 15 -->
+
+        <div class="slide" id="slide_15" data-question="11">
+          <li class="container form-line" data-type="control_radio" id="id_17">
+            <fieldset >
+              <legend align="center" id="label_17" for="input_17"><h3>Which of the following is NOT a true purpose for citation?</h3></legend>
+              <div id="cid_17" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_17_0" name="q17_whichOf17" value="A" />
+                <label id="label_input_17_0" for="input_17_0"> Citation recognizes the authors you are referencing. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_17_1" name="q17_whichOf17" value="B" />
+                <label id="label_input_17_1" for="input_17_1"> Citation is used to distribute money for royalties. </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_17_2" name="q17_whichOf17" value="C" />
+                <label id="label_input_17_2" for="input_17_2"> Citation allows your readers to confirm that you aren’t just "making stuff up." </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 15 -->
+
+
+        <!-- begin slide 16 -->
+
+        <div class="slide" id="slide_16" data-question="12">
+          <li class="container form-line" data-type="control_radio" id="id_18">
+            <fieldset >
+              <legend align="center" id="label_18" for="input_18"><h3>For a class assignment that students are to complete individually, Chi and Juan decide to collaborate. Chi compiles research notes while Juan identifies the main findings, and both write their own original research papers. Is this:</h3></legend>
+              <div id="cid_18" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_18_0" name="q18_forA" value="A" />
+                <label id="label_input_18_0" for="input_18_0"> Unethical collaboration </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_18_1" name="q18_forA" value="B" />
+                <label id="label_input_18_1" for="input_18_1"> Plagiarism </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_18_2" name="q18_forA" value="C" />
+                <label id="label_input_18_2" for="input_18_2"> Both unethical collaboration and plagiarism </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_18_3" name="q18_forA" value="D" />
+                <label id="label_input_18_3" for="input_18_3"> Acceptable collaboration </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 16 -->
+
+
+        <!-- begin slide 17 -->
+
+        <div class="slide" id="slide_17" data-question="13">
+          <li class="container form-line" data-type="control_radio" id="id_19">
+            <fieldset >
+              <legend align="center" id="label_19" for="input_19"><h3>Which of the following are realistic consequences of plagiarism?</h3></legend>
+              <div id="cid_19" class="form-input">
+                <ul class="inputs">
+                  <li><input type="radio" class="form-radio" id="input_19_0" name="q19_whichOf19" value="A" />
+                <label id="label_input_19_0" for="input_19_0"> Ruined reputation </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_19_1" name="q19_whichOf19" value="B" />
+                <label id="label_input_19_1" for="input_19_1"> Being suspended or expelled from school </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_19_2" name="q19_whichOf19" value="C" />
+                <label id="label_input_19_2" for="input_19_2"> Losing money or job </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_19_3" name="q19_whichOf19" value="D" />
+                <label id="label_input_19_3" for="input_19_3"> Being sued or having to face jail time </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_19_4" name="q19_whichOf19" value="E" />
+                <label id="label_input_19_4" for="input_19_4">  All of the Above </label></li>
+
+                  <li><input type="radio" class="form-radio" id="input_19_5" name="q19_whichOf19" value="F" />
+                <label id="label_input_19_5" for="input_19_5"> Only A and B </label></li>
+                </ul>
+              </div>
+            </fieldset>
+            <div class="mark"></div>
+          </li>
+        </div>
+
+        <!-- end slide 17 -->
+
+
+        <!-- begin slide 18 -->
+
+        <div class="slide" id="slide_18">
+          <li class="container form-line" data-type="control_button" id="id_2">
+            <h2>Whoops! Looks like you missed a question.</h2>
+            <h3>Use the arrows or bottom navigation to skip back</h3>
+            <div id="cid_2" class="form-input">
+            <button id="input_2" type="submit" class="form-submit-button cta" disabled="true">
+              Submit
+            </button>
+          </li>
+          <div class="review-answers">
+            <h3>
+              Scroll back to see the answers, or <a href="http://go.turnitin.com/plagiarism-quiz-guide" target="blank">Download the Answer Guide</a>
+            </h3>
+          </div>
+          <div class="results-container">
+            <h3>Thanks! Your score is:</h3>
+              <div class="score">
+                <h1><span></span></h1>
+              </div>
+            <h2 class="rank">Master</h2>
+            <div class="rank-explanation"><p></p></div>
+            <div class="share">
+                <a id="twitter-link" target="blank" href="">
+                  Tweet your results
+                </a>
+                <a id="email-link" target="blank" href="">
+                  Email results
+                </a>
+                <br><br>
+                <a href="http://go.turnitin.com/plagiarism-quiz-guide" target="blank">Download the Answer Guide ⬇</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end slide 18 -->
+
+        <li style="display:none">
+          Should be Empty:
+          <input type="text" name="website" value="" />
+        </li>
+        <input type="hidden" id="simple_spc" name="simple_spc" value="52386984506972" />
+        <script type="text/javascript">
+        document.getElementById("si" + "mple" + "_spc").value = "52386984506972-52386984506972";
+        </script>
+      </form>
+
+      <!-- end Jotform Form -->
+
+    </div>
+
+    <!-- form submission iframe -->
+
+    <iframe name="loadself" id="loadself" width="0" height="0"></iframe>
+
+  </body>
+</html>
